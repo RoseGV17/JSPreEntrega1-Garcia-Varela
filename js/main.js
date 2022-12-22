@@ -1,5 +1,7 @@
+//declaracion e inicializacion de variables totalizadoras
 var [precioTotal,descuentoTotal,precioFinal] = [0,0,0,0]
 
+//funcion prompt carga cantidad de elementos a calcular
 let finalContador;
 while (isNaN(finalContador)) {
     finalContador = Number(prompt("¿Cuántos productos desea ingresar?"));
@@ -7,6 +9,7 @@ while (isNaN(finalContador)) {
 
 console.log("Producto - Cantidad - Precio unitario - Subtotal - Descuento - Total Producto");
 
+//funcion ingreso y calculo p*q por producto
 function calculo (contador,descuento){
     let cantProducto;
     while (isNaN(cantProducto)) {
@@ -24,6 +27,8 @@ function calculo (contador,descuento){
     return [precioPrTotal,descuentoProducto,productoFinal]
 }
 
+
+//funcion totalizadora
 (function calcular() {
     for(var i = 0; i < finalContador; i++){
         let cantProducto = precioProducto = precioPrTotal = descuentoProducto = productoFinal = descuento = 0;
@@ -48,6 +53,7 @@ function calculo (contador,descuento){
     }
 })()
 
+//muestra en consola los montos totales de compra y descuentos
 console.log("Subtotal compra - Descuento compra - Total");
 console.log(precioTotal + "  -  " + descuentoTotal + "  -  " + precioFinal);
 
